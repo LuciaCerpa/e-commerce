@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/dark.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">    
+    <title>Academnlo e-commerse</title>
+</head>
+<body>
+    
+    <header id="home">
+    <nav id="nav">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40.48" class="navIcon">
+            <path d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+            </path>
+        </svg>
+        <div class="nav">
+            <a id="store" href="#home">STORE</a>
+            <a id="enlace1" href="#home">Home</a>
+            <a id="enlace2" href="#products">Products</a> 
+        </div>
+        <div class="cart">            
+            <img id="dark" src="./img/luna.png">
+            <label for="bolsa" class="bolsa">
+            <img src="./img/bolsa-de-la-compra.png">               
+            <span class="cantidadBolsa">0</span>
+        </label>
+        </div>
+    </nav>               
+        <input type="radio" id="cerrar" name="cart1" hidden> 
+        <input type="radio" id="bolsa" name="cart1" hidden>
+        <article id="carrito" class="carrito">
+            <h3>My Cart</h3>
+            <label for="cerrar">X</label>            
+            <div class="contenedorCarrito">
+            <article class="carritoVacio">
+                <img src="./img/empty-cart.png">    
+                <h3>Your cart is empty</h3>
+                <p>You can add items to your cart by clicking on the "+" button on the product page.</p>
+            </article> 
+            </div>
+            <div class="total hidden"><h4>TOTAL = $<span class="totalCompra">0.00</span></h4></div>
+            </article>     
+    </header>
+    <main class="productoPrincipal">
+        <article class="descripcionPrincipal">
+            <h2>New Sweatshirt<br>COLLECTIONS 2022</h2>
+            <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.</p>
+            <span>$14.00</span>
+            <div class="botonesDescripcionPrincipal">
+                <div class="discover">Discover</div>
+                <div class="addToCart">ADD TO CART</div>
+            </div>            
+        </article>       
+    </main>
+    <aside>
+        <div class="imagenPrincipal"><img src="./img/home.png"></div>
+    </aside>
+    <section id="products">        
+        <div class="productos">
+           <h3>Show All</h3>
+           <span>show all products</span>
+        </div>
+        <div class="productos">
+            <h3>Hoodies</h3>
+            <span>3 productos</span>
+        </div>
+        <div class="productos">
+            <h3>Shirt</h3>
+            <span>4 products</span>
+        </div>
+        <div class="productos">
+            <h3>Sweatshirt</h3>
+            <span>4 products</span>
+        </div>
+        <div class="contenidoSection">
+            <article class="sudaderas" id="1erSudadera">
+                <img class="imagenProducto" src="./img/featured1.png">
+                <div>
+                    <span>$ </span><h4 class="precioProducto">14.00</h4><span> | </span>Stock: <span></span>
+                    <span class="stock">10</span>
+                    <button class="addToCart">+</button>
+                    <h3 class="tituloProducto">Hoodies</h3>
+                </div>               
+            </article>
+            <article class="sudaderas" id="2daSudadera">
+                <img class="imagenProducto" src="./img/featured2.png">
+                <div>
+                    <span>$ </span>
+                    <h4 class="precioProducto">24.00</h4><span> | </span><span>Stock: </span><span class="stock">15</span>
+                    <button class="addToCart">+</button>
+                    <h3 class="tituloProducto">Shirt</h3>
+                </div>
+            </article>
+            <article class="sudaderas" id="tercerSudadera">
+                <img  class="imagenProducto" src="./img/featured3.png">
+                <div>
+                    <span>$ </span><h4 class="precioProducto">24.00 </h4><span> | </span><span>Stock: </span><span class="stock">20</span>
+                    <button class="addToCart">+</button>
+                    <h3 class="tituloProducto">Sweatshirt</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <article>
+                <h3>Our information</h3>
+                <h5>Toluca - México</h5>
+            </article>
+            <article>
+                <h3>About Us</h3>
+                <p>Support Center</p>
+                <p>Customer Support</p>
+                <p>About Us</p>
+                <p>Copy Right</p>
+            </article>
+            <article>
+                <h3>Product</h3>
+                <p>Hoodies</p>
+                <p>Shirts</p>
+                <p>Sweatshirts</p>
+            </article>
+            <article>
+                <h3>Social</h3>
+                <img src="./img/facebook.png">
+                <img src="./img/twitter.png">
+                <img src="./img/instagram.png">                
+            </article>            
+        </div>
+     
+        <span>&#169 ACADEMLO. All rights reserved</span>
+    
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>

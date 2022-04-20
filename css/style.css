@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;    
+    scroll-behavior: smooth;
+}
+
+body{    
+    background-color: hsl(206, 4%, 97%);
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "headerArea headerArea headerArea headArea"    
+    "mainArea mainArea asideArea asideArea"
+    "sectionArea sectionArea sectionArea sectionArea"
+    "footerArea footerArea footerArea footerArea"
+    ;
+    
+    grid-template-columns: 15% auto 35% 10%;
+    grid-template-rows: 6% 34.5% auto 28%;
+    gap: 1rem;
+}
+
+header{  
+    grid-area: headerArea;
+    width: 100%;          
+}
+:root{
+    --first-color:  hsl(354, 78%, 60%);
+    --button-color:  hsl(0, 0%, 17%);
+    --button-color-alt:  hsl(0, 0%, 21%);
+    --card-color:  hsl(0, 0%, 90%);
+    --title-color:  hsl(0, 0%, 15%);
+    --text-color:  hsl(0, 0%, 35%);
+    --text-color-light:  hsl(0, 0%, 55%);
+    --body-color:  hsl(206, 4%, 97%);
+    --container-color:  #fff;
+    --border-color:  hsl(0, 0%, 94%);
+    --body-font:  "Roboto", sans-serif;
+    --biggest-font-size:  2rem;
+    --h1-font-size:  1.5rem;
+    --h2-font-size:  1.25rem;
+    --h3-font-size:  1rem;
+    --normal-font-size:  0.938rem;
+    --small-font-size:  0.813rem;
+    --smaller-font-size:  0.75rem;
+    --font-medium:  500;
+    --font-bold:  700;
+    --mb-0-5:  0.5rem;
+    --mb-0-75:  0.75rem;
+    --mb-1:  1rem;
+    --mb-1-5:  1.5rem;
+    --mb-2:  2rem;
+    --mb-2-5:  2.5rem;
+    --mb-3:  3rem;
+    --z-tooltip:  10;
+    --z-fixed:  100;
+}    
+   
+
+
+.navIcon{
+    fill: hsl(354, 78%, 60%);
+    position: relative;
+    right: -135px;
+    top: -1rem;
+    width: 25%;
+    height: 200%;
+    cursor: pointer;
+}   
+
+nav{    
+    grid-area: navArea;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 16.5% 1fr 1fr 1fr;
+    padding: 2rem;
+    position: fixed;
+    z-index: 100;   
+    height: 5rem; 
+}
+
+.nav1{
+    background-color:  #fff;
+    transition-duration: .5s;
+    box-shadow: 0px 1px 1px 0px hsl(0, 0%, 90%)
+}
+
+.nav2{
+    background: transparent;
+    transition-duration: .5s;
+}
+
+svg {
+    fill: hsl(354, 78%, 60%);
+    width: 100px;
+    animation: scroll 1.5s infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.nav{        
+    grid-column-start: 2;
+    grid-column-end: 3;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    gap: 1rem;         
+}
+
+
+#store{
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color:hsl(0, 0%, 15%)
+}
+
+.nav a{
+    font-size: 1rem;
+    font-weight: bold; 
+    cursor: pointer;   
+    text-decoration: none;           
+    color: hsl(0, 0%, 17%);    
+}
+
+.nav a:hover{
+    color: hsl(354, 78%, 60%);
+}
+
+.nav a:first-child{
+    letter-spacing: 1.5px;
+}
+
+.cart{  
+    grid-column-start: 4;    
+    display: grid;    
+    grid-auto-flow: column;    
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    top: 2.5rem;
+    right: 10rem;    
+}
+
+.cart img{    
+    cursor: pointer;            
+}
+
+.bolsa{
+    position: relative;
+    width: 10px;
+}
+
+.bolsa span{
+    position: absolute;
+    background-color: black;
+    color: #fff;
+    padding: 2px;
+    font-size: 11px;
+    border-radius: 50%;
+    width: 18px;
+    text-align: center;
+    top: 8px;
+    left: 8px;
+}
+
+.carrito{
+    position: fixed;
+    background-color: hsl(206, 4%, 97%);
+    height: 100%;
+    right: -30rem;
+    width: 30%;    
+    z-index: 200;
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 1px 5px 0px hsl(0, 0%, 70%);    
+}
+
+.carrito h3{
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 20%);
+    height: 5%;
+}
+
+.carrito label{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.3rem;
+    width: 2rem;
+    font-weight: bold;    
+    cursor: pointer;
+    color: hsl(0, 0%, 20%);
+}
+
+.contenedorCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 80%; 
+    gap: 2rem;     
+    padding-top: 2rem;
+}
+
+.carritoVacio{
+    position: absolute;
+    bottom: 5rem;        
+    color: hsl(0, 0%, 35%);
+}
+
+.carritoVacio h3{
+    color: hsl(0, 0%, 20%)        
+}
+
+.carritoVacio img{
+    width: 22rem;    
+}
+
+.carritoConProductos{
+    display: flex;
+    width: 70%;           
+    align-items: center;   
+}
+
+.imagen{
+    display: flex;
+    height: 80%;    
+    border: .5px solid hsl(0, 0%, 85%);
+    width: 37%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.imagen img{
+    width: 3.5rem;
+    height: 3.5rem;    
+    margin: 5px;
+}
+
+.info{    
+    text-align: left;
+    width: 70%;
+    height: 100%;  
+    margin-left: .5rem;         
+}
+
+.info h4{
+    display: block;
+    font-size: 1rem;
+    margin: 0 0 5px;  
+    color: hsl(0, 0%, 40%);
+    font-weight: light;      
+}
+
+.info p{
+    display: inline;
+}
+
+.precioProducto{
+    color: hsl(354, 78%, 60%);    
+    font-size: 12px;
+}
+
+
+.subPrecioProducto{
+    color: hsl(354, 78%, 60%);
+    font-size: 14px;                
+}
+
+.stock{
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.contador{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 140%;
+}
+
+.mas, .menos{
+    display: flex;
+    margin: .5px;
+    border: 1px solid hsl(0, 0%, 85%);
+    width: 1.5rem;
+    font-size: 1.2rem;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: hsl(0, 0%, 40%);
+}
+
+.contadorBotones{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-left: -.75rem;
+}
+
+.basura{
+    cursor: pointer;
+}
+
+#cerrar:checked ~ .carrito{
+   right: -30rem;
+   transition: ease-out;
+   transition-duration: .5s;  
+}
+  
+#bolsa:checked ~ .carrito{    
+    right: 0;
+    transition: ease-in;
+    transition-duration: .5s;
+}
+
+main{
+    grid-area: mainArea;
+    grid-column-start: 2;    
+}
+
+.descripcionPrincipal{
+    position: relative;
+    left: -4rem;
+    bottom: -4.5rem;    
+}
+
+.descripcionPrincipal h2{
+    font-size: 2.5rem;
+    font-weight: bold;    
+}
+
+.descripcionPrincipal p{
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    color: hsl(0, 0%, 35%);
+}
+
+.descripcionPrincipal span{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: hsl(354, 78%, 60%);
+}
+
+.botonesDescripcionPrincipal{
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.discover, .addToCart{
+    display: flex;
+    background-color: hsl(0, 0%, 77%);
+    height: 3.5rem;
+    width: 7rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.addToCart{
+    color: #fff;
+    background-color: hsl(0, 0%, 0%);
+    height: 4rem;
+    width: 10rem;    
+}
+
+.discover:hover{
+    color: #fff;
+    background-color: hsl(0, 0%, 55%);
+    transition-duration: .2s;
+}
+
+.addToCart:hover{
+    color: #fff;
+    background-color: hsl(354, 78%, 60%);
+    transition-duration: .3s;
+}
+
+aside{
+    grid-area: asideArea;
+    grid-column-start: 3;
+    grid-column-end: 3;    
+    background-color: hsl(354deg 78% 60%);
+    height: 750px;
+    position: relative;
+    top:-200px;
+    display:grid;
+    grid-template-rows: 28% 10% auto;
+    z-index: -1;    
+}
+
+.imagenPrincipal{
+    grid-row-start: 2;    
+}
+
+.imagenPrincipal img{
+    width: 100%;
+}
+
+section{
+    grid-area: sectionArea;
+    grid-column-start: 2;         
+    width: 100%;   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+    text-align: center;
+    color: hsl(0, 0%, 35%);    
+    margin-top: 6rem;
+    padding-top: 0; 
+}
+
+section div{
+    height: 80%;
+}
+
+section>div:nth-last-child(4){
+    border-left: 1px solid hsl(0, 0%, 75%);;
+    border-right: 1px solid hsl(0, 0%, 75%);;
+}
+
+section>div:nth-last-child(3){
+    border-right: 1px solid hsl(0, 0%, 75%);
+}
+
+section div h3{
+    margin-bottom: 10px;    
+}
+
+.productos{
+    cursor: pointer;
+}
+
+.contenidoSection{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-auto-flow: column;
+    margin: 6rem -3rem 0 0;
+    gap: 6rem;
+    height: 10%;
+}
+
+.contenidoSection article{
+    position: relative;
+    border-radius: 10px;    
+    background-color: hsl(0, 0%, 88%);
+    height: 20rem;
+}
+
+.hidden{
+    display: none;    
+}
+
+@keyframes circle-out-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+  [transition-style="out:circle:center"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
+  }   
+
+.show{
+    display: grid;
+}
+
+.contenidoSection article:hover img{
+    transform: translateY(-.3rem);
+    transition-duration: .5s;    
+}
+
+.contenidoSection img{
+    margin: 2rem;
+    width: 12rem;            
+}
+
+
+
+.contenidoSection article div{
+    background-color: #fff;
+    height: 5rem;    
+    border-bottom-left-radius: 20px;  
+    border-bottom-right-radius: 20px;  
+    text-align: left;  
+    padding: 1rem 0 1.5rem 1.5rem;  
+    position: relative;    
+}
+
+.contenidoSection article div h4{
+    color: hsl(0, 0%, 15%);
+    font-size: 1.5rem;       
+    display: inline;
+}
+
+
+
+.contenidoSection article div h4 span{
+    border-left: 1px solid hsl(0, 0%, 35%);;
+    margin-left: .3rem;
+    padding-left: .3rem;
+    font-size: .85rem;
+    color: hsl(0, 0%, 35%);  
+      
+}
+
+.contenidoSection article div h3{
+    color: hsl(0, 0%, 15%);
+    font-size: 1.2rem;   
+     
+}
+
+.contenidoSection button{
+    position: absolute;
+    right: 1rem;
+    top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    font-size: 2rem;
+    color: hsl(0, 0%, 15%);
+    box-shadow: 0px 3px 5px 1px rgb(232, 235, 238);    
+    cursor: pointer;
+}
+
+.contenidoSection button:hover{
+    background-color: hsl(354, 78%, 60%);
+    transition-duration: .3s;
+    color: #fff;
+}
+
+footer{
+    padding-top: 7.5rem;
+    grid-area: footerArea;
+    width: 100%;
+    background-color: hsl(0, 0%, 90%);
+    margin-top: 10rem; 
+    height: 28rem;         
+}
+
+footer div{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;    
+    margin-left: 5rem;  
+    border-bottom: .5px solid rgba(255, 255, 255, 0.421);          
+}
+
+footer div article{
+    padding-bottom: 3rem;
+}
+
+footer div article> h3{
+    padding: 0 0 1.5rem 0;
+    color: hsl(0, 0%, 15%);;
+}
+
+footer div article h5{
+    padding: 0 0 .75rem 0;
+    color: hsl(0, 0%, 35%);    
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+footer div article p{
+    padding: 0 0 .75rem 0;
+    color: hsl(0, 0%, 35%);
+    cursor: pointer;
+}
+
+footer div article p:hover{
+    color: black;
+
+}
+
+footer span{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    padding-top: 4rem;      
+    font-size: small;
+    color: hsl(0, 0%, 35%);;
+}
+
+footer div article img{
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
