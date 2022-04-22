@@ -1,20 +1,30 @@
 window.onscroll = function() {
-    var y = window.scrollY;
-    var nav = document.getElementById("nav");   
+    let scroll = window.scrollY;
+    let nav = document.getElementById("nav");   
+    let sol = document.querySelector(".solIcon")
     
-    if(y>10){
-      nav.className ="nav1"            
+
+    if(scroll > 10){
+      nav.className ="nav1"
+      sol.style.fill="white"
+    
     }else{
-      nav.className = "nav2"      
+      nav.className = "nav2" 
+      sol.style.fill="black"         
     }    
   };
 
-let modo=document.getElementById("dark");
+let dark=document.getElementById("dark");
 let body=document.body
+let light=document.querySelector(".solIcon")
 
-  modo.addEventListener("click", function (){
+  dark.addEventListener("click", function (){
     body.classList.toggle("dark")   
   });
+
+  light.addEventListener("click", ()=>{
+    body.classList.toggle("dark")
+  } )
 
 let productos=document.querySelectorAll(".productos");
 let sudaderas=document.querySelectorAll(".sudaderas");
@@ -115,7 +125,7 @@ function addItemToCart(tituloProducto, precioProducto, imagenProducto, stock, st
                 </div>
                 <div class="info">
                   <h4>${tituloProducto}</h4>
-                  <p class="stock">${stock}</p><span> | $</span><span class="precioProducto">${precioProducto.toFixed(2)}</span></span><br>
+                  <p class="stock">Stock: ${stock}</p><span> | $</span><span class="precioProducto">${precioProducto.toFixed(2)}</span></span><br>
                   <span>Subtotal: $</span>
                   <span class="subPrecioProducto">${precioProducto.toFixed(2)}
                   </span>
@@ -126,7 +136,9 @@ function addItemToCart(tituloProducto, precioProducto, imagenProducto, stock, st
                       <span class="unidades">1</span><span> units</span>
                       <span class="mas">+</span>             
                     </div>              
-                    <img class="basura">trash</img>
+                    <svg class="trash" viewBox="0 0 20 20">
+							<path d="M17.114,3.923h-4.589V2.427c0-0.252-0.207-0.459-0.46-0.459H7.935c-0.252,0-0.459,0.207-0.459,0.459v1.496h-4.59c-0.252,0-0.459,0.205-0.459,0.459c0,0.252,0.207,0.459,0.459,0.459h1.51v12.732c0,0.252,0.207,0.459,0.459,0.459h10.29c0.254,0,0.459-0.207,0.459-0.459V4.841h1.511c0.252,0,0.459-0.207,0.459-0.459C17.573,4.127,17.366,3.923,17.114,3.923M8.394,2.886h3.214v0.918H8.394V2.886z M14.686,17.114H5.314V4.841h9.372V17.114z M12.525,7.306v7.344c0,0.252-0.207,0.459-0.46,0.459s-0.458-0.207-0.458-0.459V7.306c0-0.254,0.205-0.459,0.458-0.459S12.525,7.051,12.525,7.306M8.394,7.306v7.344c0,0.252-0.207,0.459-0.459,0.459s-0.459-0.207-0.459-0.459V7.306c0-0.254,0.207-0.459,0.459-0.459S8.394,7.051,8.394,7.306"></path>
+						</svg>
                   </div>
                  </div>                 
               </article>             
@@ -196,6 +208,22 @@ menos.addEventListener("click", ()=>{
  
 })
 
+let basura=itemInCartRow.querySelector(".trash")
+
+basura.addEventListener("click",()=>{
+  itemInCartRow.remove()
+  cantidadBolsa = cantidadBolsa - 1
+  bolsaCantidad.textContent = cantidadBolsa; 
+  totalActualizado()
+  if (cantidadBolsa == "0"){
+    carritoVacio.classList.remove('hidden')
+    carritoVacio.classList.add('show');
+    total.classList.remove('show')
+    total.classList.add('hidden')
+    totalActualizado()
+  }     
+})
+
 }
 
 function totalActualizado(){
@@ -211,3 +239,6 @@ function totalActualizado(){
   })
   
 }
+
+
+

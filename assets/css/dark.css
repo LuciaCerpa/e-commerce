@@ -1,0 +1,199 @@
+.dark{
+    background-color: hsl(249, 19%, 14%);
+    
+  }
+
+.dark .navIcon{
+  fill: hsl(182, 53%, 74%);        
+}      
+
+.dark .nav1{
+  background-color: hsl(246, 16%, 12%);
+  box-shadow: none;                   
+}
+
+.dark .nav2{
+  background: none;          
+}
+  
+.dark #store{
+  color: hsl(0, 0%, 95%);
+}
+
+.dark .nav a{
+  color: hsl(0, 0%, 95%); 
+}
+
+.dark .nav a:hover{
+  color: hsl(182, 53%, 74%);
+}
+
+.dark .bolsa {
+grid-column-start: 2;
+grid-column-end: 3;
+}  
+
+.dark .bolsa span{
+  background-color: hsl(0, 0%, 95%);
+  color: black;         
+}
+
+.dark #dark{
+visibility: hidden;
+}
+
+.dark .solIcon{
+display: block;
+grid-column-start: 1;   
+grid-column-end: 2;      
+}  
+
+.dark .menuDiv{
+background-color: hsl(249, 19%, 14%);         
+box-shadow: 0 0 5px 0 hsl(0, 0%, 25%);    
+}
+
+.dark .menuDiv a{
+color: hsl(0, 0%, 95%); 
+}
+
+.dark .menuDiv a:hover{
+color: hsl(182, 53%, 74%);
+}
+
+.dark .menuDiv label{
+color: hsl(0, 0%, 95%);
+cursor: pointer;
+}
+
+.dark .cart{
+display: flex;
+}
+
+.dark .carrito{
+background-color: hsl(249, 19%, 14%);
+color: hsl(0, 0%, 95%);    
+box-shadow: 0 0 5px 0 hsl(0, 0%, 25%);    
+}  
+
+.dark .carrito h3{
+color: hsl(0, 0%, 95%);
+}
+
+.dark .carrito label{
+color: hsl(0, 0%, 95%);
+}
+
+.dark .contenedorCarrito h4{
+color: hsl(0, 0%, 95%);
+}
+
+.dark .imagen{
+border-color: hsl(0, 0%, 25%);
+width: 25%;
+}
+
+.dark .stock{
+color: hsl(0, 0%, 75%);
+}
+
+.dark .menos, .dark .mas{
+border-color: hsl(0, 0%, 25%);
+}
+
+.dark .unidades{
+color: hsl(0, 0%, 75%);
+}
+
+.dark .precioProducto{
+color: hsl(182, 53%, 74%);
+}
+
+.dark .subPrecioProducto{
+color: hsl(182, 53%, 74%);
+}
+
+.dark .descripcionPrincipal h2{         
+  color: hsl(0, 0%, 95%);;   
+}
+
+.dark .descripcionPrincipal p{         
+  color: hsl(0, 0%, 75%);
+}
+
+.dark .descripcionPrincipal span{
+  color: hsl(182, 53%, 74%);
+}      
+
+.dark .addToCart{       
+background-color: hsl(246, 16%, 12%);        
+}
+
+.dark .addToCart:hover{
+color: hsl(0, 0%, 0%);
+background-color: hsl(182, 53%, 74%);
+}
+
+.dark aside .imagenPrincipal{         
+background-color: hsl(182, 53%, 74%);           
+}  
+
+.dark .productos{
+  color: hsl(0, 0%, 75%);
+}
+
+.dark .contenidoSection article{
+  background-color: hsla(246, 16%, 5%, .5);
+}
+
+.dark .contenidoSection article div{
+  background-color: hsl(246, 16%, 12%);
+}
+
+.dark .contenidoSection article div h4{
+  color: hsl(0, 0%, 75%);           
+}   
+
+.dark .contenidoSection article div h4 span{
+  border-left: 1px solid hsl(0, 0%, 75%);
+  margin-left: .3rem;
+  padding-left: .3rem;
+  font-size: .85rem;
+  color: hsl(0, 0%, 75%);    
+}
+
+.dark .contenidoSection article div h3{
+  color: hsl(0, 0%, 75%);
+}
+
+.dark .contenidoSection button{
+  background-color: hsl(246, 16%, 15%);
+  font-size: 2rem;
+  color: hsl(0, 0%, 75%);
+  box-shadow: none
+  
+}
+
+.dark .contenidoSection button:hover{
+  background-color: hsl(182, 53%, 74%);          
+  color: black;
+  box-shadow: none;
+}
+
+.dark footer{          
+  background-color: hsla(246, 16%, 5%, .5);  
+  margin-top: 10rem;
+}
+
+.dark footer div article> h3{
+  padding: 0 0 1.5rem 0;
+  color: hsl(0, 0%, 75%);
+}
+
+.dark footer div article p:hover{
+  color: white;      
+} 
+
+.dark footer span{
+color: hsl(0, 0%, 35%);
+}
