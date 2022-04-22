@@ -20,7 +20,7 @@ body{
     ;
     
     grid-template-columns: 90%;
-    grid-template-rows: 5rem 20rem 22rem 60rem auto;
+    grid-template-rows: 5rem 20rem 22rem 67rem auto;
     gap: 2rem;
 }
 
@@ -28,16 +28,16 @@ header{
     grid-area: headerArea; 
     grid-row-start: 1;
     grid-row-end: 1;
-    width: 100%;
+    width: 98%;
 }
 
 nav{
     display: grid;
     grid-template-rows: 1fr;    
-    grid-template-columns: 30% 40% auto;        
+    grid-template-columns: 30% 50% auto;        
     padding: .5rem;
     height: 3.5rem; 
-    width: 100%;
+    width: 99%;
     position: fixed;        
 }
 
@@ -51,7 +51,7 @@ nav{
     display: grid;            
     gap: 1.5rem;
     position: relative;
-    left: 1.5rem;  
+    left: 0;  
     top: 1rem; 
     z-index: 5;
 }
@@ -60,14 +60,15 @@ nav{
     background-color:  #fff;
     transition-duration: .5s;
     box-shadow: 0px 1px 1px 0px hsl(0, 0%, 90%);
-    z-index: 5;
+    z-index: 5;        
 }
 
 .nav2{
     background: none;
     transition-duration: .5s;
-    z-index: 5;
+    z-index: 5;    
 }
+
 
 .navIcon{
     fill: hsl(354, 78%, 60%);
@@ -127,13 +128,13 @@ nav{
 
 .cart{  
     grid-column-start: 3;
-    grid-column-end: 3;    
-    width: 80%;
+    grid-column-end: 3;       
     height: auto;                  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;  
     position: relative;
     top: -.5rem;
+    right: 1rem;
     grid-auto-flow: column;
 }
 
@@ -191,11 +192,11 @@ nav{
 }
 
 .menuDiv{
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     height: 20rem;
-    width: 20rem;     
+    width: 100%;     
     align-items: center;
     background-color: #fff;
     top: -30rem;    
@@ -423,6 +424,7 @@ main{
 }
 
 .descripcionPrincipal h2{
+    letter-spacing: 1.5px;
     font-size: 1.5rem;        
 }
 
@@ -483,8 +485,7 @@ aside{
     grid-row-end: 3; 
     grid-column-start: 1;
     grid-column-end: 1;
-    position: relative;        
-    right: 0rem;
+    position: relative;  
     z-index: -1;    
     height: 20rem;        
     top: 0rem;
@@ -497,10 +498,10 @@ aside{
     grid-column-start: 2;
     grid-column-end: 2;    
     background-color: hsl(354deg 78% 60%);     
-    width: 111%;
+    width: 100%;
     height: 27rem;
     position: relative;
-    right:-.5rem;  
+    right:0;  
     top: -8rem;                 
 }
 
@@ -522,6 +523,7 @@ section{
     text-align: center;
     color: hsl(0, 0%, 35%);     
     font-size: 1rem;
+    justify-content: center;
 }
 
     
@@ -533,11 +535,11 @@ section>div:nth-last-child(4){
 
 section>div:nth-last-child(3){
     border-right: 1px solid hsl(0, 0%, 75%);
-    height: 3.5rem;
+    height: 3.5rem;    
 }
 
 section>div:nth-last-child(3){        
-    grid-column-start: 1;        
+    grid-column-start: 1;            
 }
 
 
@@ -561,8 +563,7 @@ section div h3{
     grid-template-rows: auto auto auto;
     margin: 10px;
     gap: 1rem;    
-    padding-left: 3.5rem;
-                     
+    padding-left: 3.5rem;                    
 }
 
 .contenidoSection article{
@@ -731,728 +732,15 @@ footer span{
 }
 
 @media screen and (min-width: 320px) {
-    
-body{    
-    display: grid;
-    background-color: hsl(0, 0%, 95%);
-    grid-template-areas: 
-    "headerArea"
-    "aside"          
-    "mainArea"
-    "sectionArea"
-    "footArea"
-    ;
-    
-    grid-template-columns: 90%;
-    grid-template-rows: 5rem 20rem 22rem 60rem auto;
-    gap: 2rem;
-}
-
-header{  
-    grid-area: headerArea; 
-    grid-row-start: 1;
-    grid-row-end: 1;
-    width: 100%;
-}
-
-nav{
-    display: grid;
-    grid-template-rows: 1fr;    
-    grid-template-columns: 30% 40% auto;        
-    padding: .5rem;
-    height: 3.5rem; 
-    width: 100%;
-    position: fixed;        
-}
-
-
-
-.nav{        
-    grid-column-start: 1;
-    grid-column-end: 1; 
-    grid-row-start: 1;
-    grid-row-end: 1;   
-    display: grid;            
-    gap: 1.5rem;
-    position: relative;
-    left: 1.5rem;  
-    top: 1rem; 
-    z-index: 5;
-}
-
-.nav1{
-    background-color:  #fff;
-    transition-duration: .5s;
-    box-shadow: 0px 1px 1px 0px hsl(0, 0%, 90%);
-    z-index: 5;
-}
-
-.nav2{
-    background: none;
-    transition-duration: .5s;
-    z-index: 5;
-}
-
-.navIcon{
-    fill: hsl(354, 78%, 60%);
-    position: relative;
-    cursor: pointer;
-    animation: scroll 1.5s infinite;
-    grid-column-start: 1;
-    grid-column-end: 1;    
-    left: 0rem;
-    top: -1.5rem;
-    width: 2rem;
-    height: 2rem;
-}  
-
-@keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-
-
-#store{
-    grid-column-start: 2;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    color:hsl(0, 0%, 15%)
-}
-
-.nav a{
-    font-size: 1rem;
-    font-weight: bold; 
-    cursor: pointer;   
-    text-decoration: none;           
-    color: hsl(0, 0%, 17%);    
-}
-
-.nav a:hover{
-    color: hsl(354, 78%, 60%);
-}
-
-.nav a:first-child{
-    letter-spacing: 1.5px;
-}
-     
-#enlace1, #enlace2{
-    display: none;
-}
-
-.cart{  
-    grid-column-start: 3;
-    grid-column-end: 3;    
-    width: 80%;
-    height: auto;                  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
-    position: relative;
-    top: -.5rem;
-    grid-auto-flow: column;
-}
-
-#dark{
-    fill: hsl(0, 0%, 10%);
-    animation: none;
-    height: 1.2rem;
-    width: 1.2rem;
-    position: relative;
-    top: .3rem;
-    grid-column-start: 1;
-    margin-right: .5rem;
-}
-
-.solIcon{
-    fill: hsl(0, 0%, 10%);
-    height: 1.5rem;
-    width: 1.5rem;
-    animation: none;
-    display: none;
-}
-   
-
-.bolsa{
-    position: relative;
-    width: 1.5rem;        
-    top: 0rem;
-    grid-column-start: 2;
-    margin-right:  .5rem;
-    animation: none;
-    grid-column-start:2 ;
-}
-
-.bolsa span{
-    position: absolute;
-    background-color: black;
-    color: #fff;
-    padding: 0px;
-    font-size: 10px;
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    text-align: center;
-    top: .9rem;
-    left: .7rem;
-}
-
-.iconoMenu{
-    display: block;
-    height: 1rem;
-    width: 1rem;
-    position: relative;
-    top: .3rem;
-    grid-column-start: 3;
-}
-
-.menuDiv{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    width: 20rem;     
-    align-items: center;
-    background-color: #fff;
-    top: -30rem;    
-    gap: 1rem;
-    padding-top: 3rem;
-    transition: .5s;
-    z-index: 150;       
-}
-
-.menuDiv span{
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 1.2rem;
-    
-}
-
-.menuDiv a{
-        padding-top: 1.5rem;
-        font-size: 1rem;
-        font-weight: bold; 
-        cursor: pointer;   
-        text-decoration: none;           
-        color: hsl(0, 0%, 17%);    
-    }
-    
-.menuDiv a:hover{
-        color: hsl(354, 78%, 60%);
-}
-
-#menuIcon:checked ~ .menuDiv{
-    top: 0rem;
-    
-}
-
-#cerrarMenu:checked ~ .menuDiv{
-    top: -30rem;
-    transition: .5s;
-}
-
-.carrito{
-    position: fixed;
-    background-color: hsl(206, 4%, 97%);
-    height: 100%;
-    right: -40rem;
-    width: 100%;    
-    z-index: 200;
-    display: flex;    
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0px 1px 5px 0px hsl(0, 0%, 70%);    
-}
-
-.carrito h3{
-    margin-top: 3.5rem;
-    font-size: 1.25rem;
-    color: hsl(0, 0%, 20%);
-    height: 5%;
-}
-
-.carrito label{
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-size: 1.2rem;
-    width: 2rem;
-    font-weight: bold;    
-    cursor: pointer;
-    color: hsl(0, 0%, 20%);      
-}
-
-.contenedorCarrito{
-    display: flex;
-    flex-direction: column;    
-    justify-content: center;
-    align-items: center;
-    height: 50rem;
-    width: 80%; 
-    gap: 2rem;       
-}
-
-.carritoVacio{
-    position: absolute;
-    top: 20%;
-    color: hsl(0, 0%, 35%);
-    width: 75%;        
-    text-align: justify;
-}
-
-.carritoVacio h3{
-    color: hsl(0, 0%, 20%);
-    text-align: center;      
-    
-}
-
-.carritoVacio img{
-    width: 15rem;    
-}
-
-.carritoConProductos{
-    display: flex;
-    width: 90%;           
-    align-items: center;       
-}
-
-.imagen{
-    display: flex;
-    height: auto;
-    border: .5px solid hwb(0 85% 15%);
-    width: 28%;
-    justify-content: center;
-    align-items: center;        
-}
-
-.imagen img{
-    width: 4rem;
-    height: 4rem;    
-     
-}
-
-.info{    
-    text-align: left;
-    width: 85%;
-    height: auto;  
-    margin-left: .5rem;         
-}
-
-
-.info h4{
-    display: block;
-    font-size: 16px;
-    margin: 0 0 5px;  
-    color: hsl(0, 0%, 40%);
-    font-weight: light;      
-}
-
-.info p{
-    display: inline;        
-    font-size: 14px;
-}
-
-.precioProducto{
-    color: hsl(354, 78%, 60%);    
-    font-size: 12px;
-}
-
-
-.subPrecioProducto{
-    color: hsl(354, 78%, 60%);
-    font-size: 14px;                
-}
-
-.stock{
-    font-size: 12px;
-    padding: 0px 0;
-}
-
-.contador{
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem 0;
-    width: 140%;
-}
-
-.mas, .menos{
-    display: flex;
-    margin: 5px;
-    border: 1px solid hsl(0, 0%, 85%);
-    width: 1.5rem;
-    font-size: 18px;
-    height: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: hsl(0, 0%, 40%);
-}
-
-.contadorBotones{
-    display: flex;
-    justify-content: space-evenly;
-    width: 70%;
-    margin-top:-.2rem;
-    margin-left: 0;
-}
-
-.contadorBotones span{
-    margin-top: 1px;
-}
-
-.trash{
-    cursor: pointer;
-    height: 1rem;
-    width: 1rem;
-    fill: hsl(354, 78%, 60%);
-
-}
-
-#cerrar:checked ~ .carrito{
-   right: -30rem;
-   transition: ease-out;
-   transition-duration: .5s;  
-}
-  
-#bolsa:checked ~ .carrito{    
-    right: 0;
-    transition: ease-in;
-    transition-duration: .5s;
-}
-
-
-
-main{
-    grid-area: mainArea;            
-    grid-row-start: 3;
-    padding: 5px;
-    padding-left: 1rem;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-
-.descripcionPrincipal{
-    position: relative;
-    left: 0rem;
-    bottom: 0rem;    
-}
-
-.descripcionPrincipal h2{
-    font-size: 1.5rem;        
-}
-
-.descripcionPrincipal p{
-    font-size: .9rem;
-    padding: 1rem 0;
-    color: hsl(0, 0%, 35%);
-    width: 17rem;
-}
-
-.descripcionPrincipal span{
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    font-weight: bold; 
-    color: hsl(354, 78%, 60%);       
-}
-
-.botonesDescripcionPrincipal{
-    margin: 3rem 0; 
-    display: flex;
-    align-items: center;       
-}
-
-.discover, .addToCart{
-    display: flex;
-    background-color: hsl(0, 0%, 77%);
-    height: 3.5rem;
-    width: 7rem;
-    justify-content: center;
-    align-items: center;
-    font-size: .90rem;
-    cursor: pointer;
-}
-
-.addToCart{
-    color: #fff;
-    background-color: hsl(0, 0%, 0%);
-    height: 4rem;
-    width: 9rem;
-    font-size: .90rem;    
-}
-
-.discover:hover{
-    color: #fff;
-    background-color: hsl(0, 0%, 55%);
-    transition-duration: .2s;
-}
-
-.addToCart:hover{
-    color: #fff;
-    background-color: hsl(354, 78%, 60%);
-    transition-duration: .3s;
-}
-
-aside{
-    grid-area: asideArea;
-    grid-row-start: 2;
-    grid-row-end: 3; 
-    grid-column-start: 1;
-    grid-column-end: 1;
-    position: relative;        
-    right: 0rem;
-    z-index: -1;    
-    height: 20rem;        
-    top: 0rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .imagenPrincipal{
-    grid-column-start: 2;
-    grid-column-end: 2;    
-    background-color: hsl(354deg 78% 60%);     
-    width: 111%;
-    height: 27rem;
-    position: relative;
-    right:-.5rem;  
-    top: -8rem;                 
-}
-
-.imagenPrincipal img{
-    width: 13.5rem;
-    height: 14rem;        
-    position: relative;
-    right: 0;
-    bottom: -12rem;    
-}
-
-section{
-    grid-area: sectionArea;
-    grid-column-start: 1;  
-    padding: 0rem;       
-    display: grid;
-    grid-template-columns: 10rem 10rem;
-    grid-template-rows: 7rem 4rem 5rem auto;    
-    text-align: center;
-    color: hsl(0, 0%, 35%);     
-    font-size: 1rem;
-}
-
-    
-section>div:nth-last-child(4){
-    border-left: 1px solid hsl(0, 0%, 75%);
-    border-right: 0px solid hsl(0, 0%, 75%);
-    height: 3.5rem;
-}
-
-section>div:nth-last-child(3){
-    border-right: 1px solid hsl(0, 0%, 75%);
-    height: 3.5rem;
-}
-
-section>div:nth-last-child(3){        
-    grid-column-start: 1;        
-}
-
-
-section div h3{
-    margin-bottom: 1rem;    
-}
-
-.productos{
-    cursor: pointer;          
-    padding-left: 0.5rem;  
-}
-
-.contenidoSection{    
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start:4;
-    grid-row-end: 4;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 11rem;
-    grid-template-rows: auto auto auto;
-    margin: 10px;
-    gap: 1rem;    
-    padding-left: 3.5rem;
-                     
-}
-
-.contenidoSection article{
-    position: relative;
-    border-radius: 8px;    
-    background-color: hsl(0, 0%, 88%);
-    height: auto; 
-    margin-bottom: 1rem; 
-      
-}
-
-.hidden{
-    display: none;    
-}
-
-.show{
-    display: grid;
-}
-
-.contenidoSection article:hover img{
-    transform: translateY(-.3rem);
-    transition-duration: .5s;    
-}
-
-.contenidoSection img{
-    margin: 0.5rem 1rem;
-    width: 9rem;            
-}
-
-
-
-.contenidoSection article div{
-    background-color: #fff;
-    height: auto;    
-    border-bottom-left-radius: 8px;  
-    border-bottom-right-radius: 8px;  
-    text-align: left;  
-    padding: 1rem 0 .1rem .5rem;          
-    position: relative;
-    
-}
-
-.contenidoSection article div h4{
-    color: hsl(0, 0%, 15%);
-    font-size: 1.25rem;       
-    display: inline;
-}
-
-
-
-.contenidoSection article div h4 span{
-    border-left: 1px solid hsl(0, 0%, 35%);;
-    margin-left: .3rem;
-    padding-left: .3rem;        
-    color: hsl(0, 0%, 35%);  
-      
-}
-
-.contenidoSection article div h3{
-    color: hsl(0, 0%, 15%);
-    font-size: 1rem;   
-     
-}
-
-.contenidoSection button{
-    position: absolute;
-    right: .3rem;
-    top: -1.3rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    border: none;
-    background-color: white;
-    font-size: 1.5rem;
-    color: hsl(0, 0%, 15%);
-    box-shadow: 0px 3px 5px 1px rgb(232, 235, 238);    
-    cursor: pointer;
-}
-
-.contenidoSection button:hover{
-    background-color: hsl(354, 78%, 60%);
-    transition-duration: .3s;
-    color: #fff;
-}
-
-footer{
-    padding: 10px;
-    grid-area: footerArea;
-    grid-column-start:1;
-    grid-column-end:1;
-    grid-row-start: 5;
-    width: 111%;
-    background-color: hsl(0, 0%, 90%);
-    margin-top: 1rem; 
-    height: auto;         
+    right:-2.35rem;  
+                  
 }
 
 footer div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    
-    margin: 2.5rem;
-    margin-top: 6rem;    
-    margin-left: 0px;  
-    border-bottom: .5px solid rgba(255, 255, 255, 0.421);          
+    margin-left: 10px;    
 }
 
-footer div article{
-    padding-bottom: 1.2rem;
-}
-
-footer div article> h3{
-    padding: 0 0 1.5rem 0;
-    color: hsl(0, 0%, 15%);
-    font-size: 1.25rem;
-}
-
-footer div article h5{
-    padding: 0 0 .9rem 0;
-    color: hsl(0, 0%, 35%);    
-    font-weight: lighter;  
-    font-size: .9rem;      
-}
-
-footer div article p{
-    padding: 0 0 .9rem 0;
-    color: hsl(0, 0%, 35%);
-    cursor: pointer;
-    font-size: .9rem;
-}
-
-footer div article p:hover{
-    color: black;
-
-}
-
-footer span{
-    display: flex;
-    width: 85%;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0rem;      
-    color: hsl(0, 0%, 55%);
-}
-
-.divIcons{
-    padding-bottom: 3rem;
-}
-  
-.footerIcons{
-    margin: 0 0.1rem;
-    cursor: pointer;
-    height: 1.2rem;
-    width: 1.2rem;
-    fill: hsl(0, 0%, 45%);
-}
-.footerIcons:hover{
-    fill: hsl(0, 0%, 10%);
-}
-
-.pieDePagina{
-    margin: 5px;
-    font-size: .85rem;
-}
 }
 
 
@@ -1535,17 +823,11 @@ footer div{
         "footArea footArea"
         ;
         
-        grid-template-columns: 90%;
-        grid-template-rows: 5rem 20rem 67rem auto;
-        gap: 2rem;
+        grid-template-columns: 90% auto;
+        grid-template-rows: 5rem 10rem 67rem auto;
+        
     }
-    
-    header{  
-        grid-area: headerArea;
-        grid-template-columns: 25% 40% 20%       
-    }
-
-           
+              
     .nav{
         display: flex;
         position: relative;
@@ -1559,10 +841,9 @@ footer div{
         height: 2.5rem;
     }  
     
-     .cart{
-         position: relative;
-         right: -7rem;
-     } 
+    .cart{
+        right: -3rem;
+    }
     
     #enlace1, #enlace2{
         display: grid;
@@ -1596,40 +877,21 @@ footer div{
         grid-column-start: 1;
         grid-column-end: 1;
     }
-    
-    .descripcionPrincipal p{        
-        width: 20rem;
+
+    .descripcionPrincipal h2{
+        padding-top: 1rem;
+        font-size: 1.75rem;        
     }
     
-    aside{
-        right: 0rem;
-        z-index: -1;    
-        height: 20rem;        
-        top: 0rem;
-        width: 100%;       
+    .descripcionPrincipal p{  
+        padding: 1rem 0;      
+        width: 50%;
     }
-    
-    .imagenPrincipal{
-        right:-5rem;       width: 100%;
-        position: relative;
-        left: 4.9rem;   
-    }
-    
-    .imagenPrincipal img{
-        width: 22rem;
-        height:22rem;     
-        position: relative;
-        right: 0;
-        bottom: -3rem;    
-    }
-    
+           
     #products{        
-        margin: 15rem 0 0 0;
-        display: grid;     
+        margin: 20rem 0 0 0;            
         grid-template-columns: repeat(4, 12rem);
-        grid-template-rows:auto;            
-        justify-content: space-evenly;      
-        align-items: center;    
+        grid-template-rows:auto;               
     }
     
         
@@ -1682,20 +944,23 @@ footer div{
    }
 
    footer{
-       width: 111%;
+       width: 110%;
    }
     
     footer div{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;   
-             
+        grid-template-columns: 1fr 1fr 1fr 1fr;                
+    }
+
+    .pieDePagina{
+        padding: 1rem;
     }
 }
 
 @media screen and (min-width: 992px) {
     body{    
-        grid-template-columns: 90%;
-        grid-template-rows: 5rem 26rem 53rem auto;
+        grid-template-columns: 90% auto;
+        grid-template-rows: 5rem 26rem 58rem auto;
         gap: 2rem;
     }
 
@@ -1705,7 +970,8 @@ footer div{
     }
 
     .cart{
-        width: 40%;
+        width: 60%;
+        left: 5rem;
     }
 
     .carrito{
@@ -1716,6 +982,7 @@ footer div{
 
     .productoPrincipal{
         width: 50%;
+        margin-left: 1rem;
     }
 
     .descripcionPrincipal{
@@ -1724,28 +991,32 @@ footer div{
     }
     
    .descripcionPrincipal h2{
-       font-size: 2rem;
+       font-size: 2.2rem;
+       letter-spacing: 3px;
+       width: 110%;
    }   
     .descripcionPrincipal p{      
         font-size: 1rem;  
-        width: 100%;
+        width: 110%;
     }
     
     .imagenPrincipal{       
         left: 7rem;
-        height: 40rem;
-        width: 32rem;   
+        height: 43rem;
+        width: 31rem; 
+        top: -8rem;  
     }
     
     .imagenPrincipal img{
         width: 30rem;
         height:30rem;     
         right: 0;
-        top: 8rem;    
+        top: 11rem;    
     }
 
     #products{
         grid-template-rows: 10rem 25rem;
+        font-size: 1.25rem;
     }
    
     .contenidoSection{
@@ -1753,13 +1024,36 @@ footer div{
     grid-row-end: 2;
     grid-column-start: 2;
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    
+    grid-template-columns: repeat(3, 16.5rem);
+    grid-template-rows: 22rem;          
+    gap: 5rem;
+   }
+
+   .sudaderas{       
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 20%;  
+   }
+
+   .sudaderas div{
+       width: 100%;                            
+   }
+
+   .signoDePeso, .tituloProducto{
+        padding-left: 1rem;                     
+   }
+     
+   .signoDePeso{
+       font-size: 1.25rem;
+       font-weight: bold;
    }
    
    .contenidoSection img{
        width: 15rem;
+       padding: 1rem;
+       padding-top:2rem;
    }
    
    #primerSudadera{
@@ -1779,109 +1073,51 @@ footer div{
 
    footer{
        width: 111%;
+       text-align: center;
    }
     
     footer div{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;   
-             
+        padding-left: 1rem;  
+        text-align: left;
     }
 }
 
 @media screen and (min-width: 1024px) {
-
-    body{    
-        grid-template-columns: 90%;
-        grid-template-rows: 5rem 26rem 53rem auto;
-        gap: 2rem;
-    }
-
-
-    nav{
-        width: 100%;
-    }
-
-    .cart{
-        width: 40%;
-    }
-
-    .carrito{
-        right: -50rem;
-        width: 40%;
-        position: fixed;
-    }   
-
-    .productoPrincipal{
-        width: 50%;
-    }
-
-    .descripcionPrincipal{
-        width: 85%;
-        margin-top: 5rem;
-    }
     
    .descripcionPrincipal h2{
-       font-size: 2rem;
+       font-size: 2.5rem;
+       letter-spacing: 0;
    }   
-    .descripcionPrincipal p{      
-        font-size: 1rem;  
+    .descripcionPrincipal span{      
+        font-size: 1.5rem;  
         width: 100%;
     }
     
     .imagenPrincipal{       
         left: 7rem;
-        height: 40rem;
-        width: 32rem;   
+        height: 43rem;
+        width: 30rem;   
     }
     
     .imagenPrincipal img{
         width: 30rem;
         height:30rem;     
         right: 0;
-        top: 8rem;    
+        top: 11rem;    
     }
 
-    #products{
-        grid-template-rows: 10rem 25rem;
-    }
-   
     .contenidoSection{
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 22.5rem;
     
    }
+      
    
-   .contenidoSection img{
-       width: 15rem;
-   }
-   
-   #primerSudadera{
-       grid-column-start: 1;
-       grid-column-end: 2;
-   }
-
-   #segundaSudadera{
-    grid-column-start: 2;
-    grid-column-end: 3;
-   }
-
-   #tercerSudadera{
-    grid-column-start: 3;
-    grid-column-end: 4;  
-   }
-
-   footer{
-       width: 111%;
-   }
-    
-    footer div{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;   
-             
-    }
 
 }
